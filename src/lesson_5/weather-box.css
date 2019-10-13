@@ -1,0 +1,131 @@
+.weather-box {
+  width: 500px;
+  position: relative;
+  border: 1px solid red;
+  padding-bottom: 64px;
+}
+
+.weather-box__image {
+  width: 100%;
+  display: block;
+}
+
+.weather-box__current {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid green;
+}
+
+.weather-details {
+  max-width: 240px;
+  width: 100%;
+  min-height: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.67);
+  color: #fff;
+}
+
+.weather-details > * {
+  margin-top: 12px;
+}
+
+.weather-details__icon {
+  max-width: 96px;
+  width: 100%;
+  min-height: 96px;
+}
+
+.weather-details__icon > img {
+  width: 100%;
+  display: block;
+}
+
+.svg-icon > path {
+  fill: #0f8ffe;
+}
+
+.weather-details:hover .svg-icon > path {
+  fill: red;
+}
+
+.weather-details:hover .weather-details__day {
+  color: red;
+}
+
+.weather-details__degrees {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.weather-details__degrees > span {
+  position: relative;
+}
+
+.weather-details__degrees > span:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.weather-box__list {
+  height: 150px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background: #000023;
+}
+
+.weather-list__item {
+  color: #fff;
+  width: 16.667%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 22px;
+  position: relative;
+}
+
+.weather-list__item > * {
+  margin-top: 15px;
+}
+
+.weather-list__item:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #a0a0ac;
+  opacity: 0.27;
+  width: 1px;
+  height: 75px;
+}
+
+.weather-list__item:last-child::after {
+  display: none;
+}
+
+.weather-list__icon {
+  width: 36px;
+  height: 31px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.weather-list__icon > svg {
+  width: 100%;
+}
