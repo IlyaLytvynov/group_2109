@@ -1,0 +1,32 @@
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  width: 100%;
+  @include flexColumn;
+  position: relative;
+  color: $font-color-base;
+  font-size: $font-size-base;
+  & > * {
+    margin-bottom: 1.5 * $page-spacing;
+  }
+  &__image {
+    width: 100%;
+    display: block;
+  }
+  &__label {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: $active-color;
+  }
+  &__price {
+    font-size: $font-size-small;
+  }
+  &__description {
+    @include flexColumn;
+    position: relative;
+  }
+}

@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/test/test.css":
-/*!***************************!*\
-  !*** ./src/test/test.css ***!
-  \***************************/
+/***/ "./src/lesson_3/lesson_3.css":
+/*!***********************************!*\
+  !*** ./src/lesson_3/lesson_3.css ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -97,32 +97,32 @@
 
 /***/ }),
 
-/***/ "./src/test/test.js":
-/*!**************************!*\
-  !*** ./src/test/test.js ***!
-  \**************************/
+/***/ "./src/lesson_3/lesson_3.js":
+/*!**********************************!*\
+  !*** ./src/lesson_3/lesson_3.js ***!
+  \**********************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _test_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./test.css */ "./src/test/test.css");
-/* harmony import */ var _test_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_test_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _lesson_3_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_3.css */ "./src/lesson_3/lesson_3.css");
+/* harmony import */ var _lesson_3_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_3_css__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
 
-/***/ 1:
-/*!********************************!*\
-  !*** multi ./src/test/test.js ***!
-  \********************************/
+/***/ 3:
+/*!****************************************!*\
+  !*** multi ./src/lesson_3/lesson_3.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./src/test/test.js */"./src/test/test.js");
+module.exports = __webpack_require__(/*! ./src/lesson_3/lesson_3.js */"./src/lesson_3/lesson_3.js");
 
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=test.js.map
+//# sourceMappingURL=lesson_3.js.map

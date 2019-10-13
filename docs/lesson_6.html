@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  <link href="/lesson_6.css" rel="stylesheet"></head>
+  <body>
+    <header class="global-header">
+      <nav id="nav" class="global-nav ">
+        <div class="global-nav__controls">
+          <button class="global-nav__control" id="button">O</button>
+          <button class="global-nav__control">L</button>
+          <button class="global-nav__control">C</button>
+        </div>
+        <ul class="global-nav__menu menu">
+          <li class="menu__item"><a href="">item 1</a></li>
+          <li class="menu__item"><a href="">item 2</a></li>
+          <li class="menu__item"><a href="">item 3</a></li>
+          <li class="menu__item"><a href="">item 4</a></li>
+          <li class="menu__item"><a href="">item 5</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-container">
+      <section class="main-box">
+        IPhone 11 pro
+      </section>
+      <footer class="page-footer"></footer>
+    </main>
+  <script type="text/javascript" src="/lesson_6.js"></script></body>
+  <script>
+    button.onclick = () => {
+      nav.classList.toggle('global-nav_opened');
+    };
+  </script>
+</html>
