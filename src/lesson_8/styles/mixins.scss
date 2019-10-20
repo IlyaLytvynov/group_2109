@@ -1,0 +1,36 @@
+@mixin pageContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $page-spacing;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+@mixin mobile {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin phablet {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}

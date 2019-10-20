@@ -1,4 +1,23 @@
 @import './styles/variables.scss';
+@import './styles/mixins.scss';
 @import './styles/grid.scss';
 @import './styles/base.scss';
 @import './styles/product.scss';
+@import './styles/baner.scss';
+
+.btn {
+  border: 1px solid grey;
+  font-size: 1rem;
+  padding: 10px;
+  &_green {
+    color: green;
+    border-color: green;
+  }
+  &_large {
+    padding: 20px;
+    font-size: 1.5rem;
+  }
+  &_rounded {
+    border-radius: 10px;
+  }
+}
