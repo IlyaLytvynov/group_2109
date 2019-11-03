@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="http://localhost:35729/livereload.js"></script>
+    <title key="title"></title>
+  <link href="/lesson_12.css" rel="stylesheet"></head>
+  <body>
+    <h1>Hello from lesson_12</h1>
+    <button id="myCoolButton">click me</button>
+    <div id="output"></div>
+    <button id="hangmanBtn">Start game</button>
+    <script>
+      hangmanBtn.onclick = hangman;
+      function hangman() {
+        const words = ['Hello', 'World', 'tEst', 'baNanaS'];
+        const randomIndex = Math.floor(Math.random() * words.length);
+        const word = words[randomIndex];
+        let targetWordLength = word.length;
+        console.log(word);
+        const targetWord = [];
+
+        for (let i = 0; i < word.length; i++) {
+          targetWord.push('*');
+        }
+
+        while (targetWordLength !== 0) {
+          alert(targetWord.join(''));
+          const letter = prompt('Enter one letter!');
+
+          if (letter === null) {
+            break;
+          }
+
+          for (let i = 0; i < word.length; i++) {
+            if (letter.toLowerCase() === word[i].toLowerCase()) {
+              targetWord[i] = word[i];
+              targetWordLength--;
+            }
+          }
+        }
+
+        alert('Target word is ', word);
+      }
+    </script>
+  <script type="text/javascript" src="/lesson_12.js"></script></body>
+</html>

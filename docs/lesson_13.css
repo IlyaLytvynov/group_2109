@@ -1,0 +1,27 @@
+.feed {
+  max-width: 400px;
+  margin: 0 auto; }
+  .feed__item {
+    width: 100%;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: stretch; }
+    .feed__item > img {
+      width: 100%;
+      display: block; }
+  .feed__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden; }
+  .feed__item:hover .feed__overlay {
+    opacity: 1;
+    visibility: visible; }
+
+
+/*# sourceMappingURL=lesson_13.css.map*/
