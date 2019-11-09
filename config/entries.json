@@ -37,5 +37,8 @@
   ],
   "lesson_13": [
     "./src/lesson_13/lesson_13.js"
+  ],
+  "lesson_15": [
+    "./src/lesson_15/lesson_15.js"
   ]
 }
