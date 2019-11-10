@@ -1,0 +1,25 @@
+
+.lighter {
+  width: 60px;
+  border: 1px solid grey; }
+  .lighter__light {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto; }
+    .lighter__light_red.active {
+      background-color: red; }
+    .lighter__light_yellow.active {
+      background-color: yellow; }
+    .lighter__light_green.active {
+      background-color: green; }
+    .lighter__light_orange.active {
+      background-color: orange; }
+    .lighter__light_magenta.active {
+      background-color: magenta; }
+    .lighter__light_blue.active {
+      background-color: blue; }
+
+
+/*# sourceMappingURL=lesson_16.css.map*/

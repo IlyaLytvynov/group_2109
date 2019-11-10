@@ -1,0 +1,41 @@
+.lighter {
+  width: 60px;
+  border: 1px solid grey;
+  &__light {
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    &_red {
+      &.active {
+        background-color: red;
+      }
+    }
+    &_yellow {
+      &.active {
+        background-color: yellow;
+      }
+    }
+    &_green {
+      &.active {
+        background-color: green;
+      }
+    }
+    &_orange {
+      &.active {
+        background-color: orange;
+      }
+    }
+    &_magenta {
+      &.active {
+        background-color: magenta;
+      }
+    }
+    &_blue {
+      &.active {
+        background-color: blue;
+      }
+    }
+  }
+}
