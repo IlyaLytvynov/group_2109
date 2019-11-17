@@ -1,3 +1,9 @@
 
+.post {
+  opacity: 0;
+  transition: all 1s; }
+  .post_visible {
+    opacity: 1; }
+
 
 /*# sourceMappingURL=lesson_17.css.map*/

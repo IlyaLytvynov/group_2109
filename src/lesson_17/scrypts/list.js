@@ -1,30 +1,27 @@
-import {Post} from './post';
+import { Post } from './post';
 
 export class List {
-  constructor(target = document.querySelector('body')) {
+  constructor(target = document.querySelector('body'), onDelete) {
     this.target = target;
-    this.posts = [];
-    this.fetchPosts();
-   
-  }
-
-  fetchPosts() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:3000/posts');
-    xhr.send();
-    xhr.onload = () => {
-      console.log(xhr.response);
-      this.posts = JSON.parse(xhr.response);
-      this.renderList();
-    }
-  }
-
-  renderList() {
     this.ul = document.createElement('ul');
-    for(let post of this.posts) {
-      new Post(this.ul, post);
+    this.onDelete = onDelete;
+    this.listItems = [];
+  }
+
+  renderList(posts) {
+    this.ul.innerHTML = '';
+    for (let post of posts) {
+      this.renderOne(post);
     }
 
     this.target.appendChild(this.ul);
+  }
+
+  deleteHandler(id) {
+    this.onDelete(id);
+  }
+
+  renderOne(post) {
+    this.listItems.push(new Post(this.ul, post, id => this.deleteHandler(id)));
   }
 }

@@ -1,41 +1,35 @@
 export class Form {
-  constructor(target = document.querySelector('body')) {
+  constructor(target = document.querySelector('body'), onSubmit) {
     this.target = target;
+    this.onSubmit = onSubmit;
     this.render();
   }
 
   render() {
     this.form = document.createElement('form');
-    this.input = document.createElement('input');
-    this.textarea = document.createElement('textarea');
-    this.btn = document.createElement('button');
+    const input = document.createElement('input');
+    const textarea = document.createElement('textarea');
+    const btn = document.createElement('button');
 
-    this.input.placeholder = 'Title';
-    this.textarea.placeholder = 'Content';
-    this.btn.textContent = 'Add';
-    
-    this.form.onsubmit = (eventObject) => {
-      console.log(eventObject);
+    input.placeholder = 'Title';
+    textarea.placeholder = 'Content';
+
+    btn.textContent = 'Add';
+
+    this.form.addEventListener('submit', eventObject => {
+      console.log('DATA SEND:', eventObject);
       eventObject.preventDefault();
-      this.sendData();
-    }
+      this.onSubmit({
+        title: input.value,
+        content: textarea.value
+      });
+      input.value = '';
+      textarea.value = '';
+    });
 
-    this.form.appendChild(this.input);
-    this.form.appendChild(this.textarea);
-    this.form.appendChild(this.btn);
+    this.form.appendChild(input);
+    this.form.appendChild(textarea);
+    this.form.appendChild(btn);
     this.target.appendChild(this.form);
-  }
-
-  sendData() {
-    const title = this.input.value;
-    const content = this.textarea.value;
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'http://localhost:3000/posts');
-    const data = {title, content};
-    xhr.setRequestHeader('content-type', 'application/json');
-    xhr.send(JSON.stringify(data));
-    xhr.onload = () => {
-      console.log(xhr.response);
-    }
   }
 }

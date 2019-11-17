@@ -1,6 +1,4 @@
 import './lesson_17.scss';
-import {List} from './scrypts/list';
-import {Form} from './scrypts/form';
+import { PostsBox } from './scrypts/postsBox';
 
-new Form();
-new List();
+const postBox = new PostsBox();
